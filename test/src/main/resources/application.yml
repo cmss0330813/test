@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: dev
+lombok:
+  log:
+    enabled: true
+
+
+server:
+  port: 8081
+  spring:
+    thymeleaf:
+      prefix: classpath:/templates/
+      suffix: .html
+      mode: HTML
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/storypick
+    username: root
+    password: mysqlA0330#
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+#    dialect: org.hibernate.dialect.MySQL8Dialect
